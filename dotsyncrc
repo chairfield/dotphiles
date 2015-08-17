@@ -8,7 +8,7 @@
 #
 
 # Location of your dotfiles in $HOME
-# DOTFILES=.dotfiles
+DOTFILES=.dotfiles
 
 # dotfiles to symlink
 #
@@ -64,7 +64,7 @@ dotsyncrc
 #tmux/tmux.conf
 #tmux/tmuxinator
 #vim/dotvim:.vim
-#vim/vimrc
+vim/vimrc
 #vim/gvimrc
 #wget/wgetrc
 #zsh/fasdrc
@@ -73,7 +73,7 @@ dotsyncrc
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
-#zsh/zshrc
+zsh/zshrc
 [endfiles]
 
 # Hosts to sync
