@@ -31,6 +31,7 @@ dotsyncrc
 #git/gitk
 #gnupg
 #grc
+i3status/i3status.conf
 #input/editrc
 #input/inputrc
 #irssi
@@ -79,6 +80,7 @@ zsh/zshrc
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
+localhost                        git=ANY
 ARCHER                           git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
