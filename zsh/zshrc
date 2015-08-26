@@ -205,3 +205,5 @@ source $ZSH/oh-my-zsh.sh
 # Print the oldest three non-hidden files/directories in home, as a reminder to clean up
 ls -l --sort=time | tail -n 3 | awk '{ printf "%-30s %s %s\n", $9, $6, $7 }'
 
+alias killx="pkill -15 Xorg"
+
