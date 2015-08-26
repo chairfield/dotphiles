@@ -68,6 +68,7 @@ vim/dotvim:.vim
 vim/vimrc
 #vim/gvimrc
 #wget/wgetrc
+x/xinitrc
 #zsh/fasdrc
 zsh/dotzsh:.zsh
 #zsh/zlogin
