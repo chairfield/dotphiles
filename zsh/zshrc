@@ -207,4 +207,10 @@ ls -l --sort=time | tail -n 3 | awk '{ printf "%-30s %s %s\n", $9, $6, $7 }'
 
 alias killx="pkill -15 Xorg"
 alias gs="git status"
+alias skype="ssh docker-skype skype-pulseaudio"
+alias skyperun="sudo docker run -d -p 55555:22 skype"
+function skypekill() {
+  docker rm -f $(docker ps -q -f image=skype)
+}
 
+alias irssi="docker run -it --rm -v /etc/localtime:/etc/localtime -v $HOME/.irssi:/home/user/.irssi --read-only --name irssi irssi"
