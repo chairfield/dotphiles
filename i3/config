@@ -155,4 +155,9 @@ bar {
         status_command i3status
 }
 
+### PERSONAL SETTINGS ###
+
+# sets the default layout to stacking
+workspace_layout stacking
+
 bindsym $mod+c exec "chromium --force-device-scale-factor=2"
