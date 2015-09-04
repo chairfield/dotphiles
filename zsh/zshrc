@@ -206,11 +206,33 @@ source $ZSH/oh-my-zsh.sh
 ls -l --sort=time | tail -n 3 | awk '{ printf "%-30s %s %s\n", $9, $6, $7 }'
 
 alias killx="pkill -15 Xorg"
+alias hib="sudo systemctl hibernate"
 alias gs="git status"
+
+# Skype
 alias skype="ssh docker-skype skype-pulseaudio"
 alias skyperun="sudo docker run -d -p 55555:22 skype"
 function skypekill() {
   docker rm -f $(docker ps -q -f image=skype)
 }
 
+# Irssi
 alias irssi="docker run -it --rm -v /etc/localtime:/etc/localtime -v $HOME/.irssi:/home/user/.irssi --read-only --name irssi irssi"
+
+remmina(){
+  del_stopped remmina
+
+  docker run -d \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    -e GDK_SCALE \
+    -e GDK_DPI_SCALE \
+    -v $HOME/.remmina:/root/.remmina \
+    --name remmina \
+    jess/remmina
+}
+
+echo "-------------------------------------"
+echo "I make, every day, hours for motivation. I motivate myself; I make time. I make appointments with myself to motivate myself and inspire myself. I don't wait for it to come from the heavens and to fall on me."
+echo "~ Ido Portal"
