@@ -73,7 +73,7 @@ x/Xmodmap
 x/Xresources
 #zsh/fasdrc
 zsh/dotzsh:.zsh
-#zsh/zlogin
+zsh/zlogin
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
