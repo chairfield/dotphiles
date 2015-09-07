@@ -208,6 +208,8 @@ ls -l --sort=time | tail -n 3 | awk '{ printf "%-30s %s %s\n", $9, $6, $7 }'
 alias killx="pkill -15 Xorg"
 alias hib="sudo systemctl hibernate"
 alias gs="git status"
+alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
+alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 
 # Skype
 alias skype="ssh docker-skype skype-pulseaudio"
@@ -219,6 +221,14 @@ function skypekill() {
 # Irssi
 alias irssi="docker run -it --rm -v /etc/localtime:/etc/localtime -v $HOME/.irssi:/home/user/.irssi --read-only --name irssi irssi"
 
+del_stopped(){
+  local name=$1
+  local state=$(docker inspect --format "{{.State.Running}}" $name 2>/dev/null)
+
+  if [[ "$state" == "false" ]]; then
+    docker rm $name
+  fi
+}
 remmina(){
   del_stopped remmina
 
@@ -231,6 +241,39 @@ remmina(){
     -v $HOME/.remmina:/root/.remmina \
     --name remmina \
     jess/remmina
+}
+jchrome(){
+  del_stopped chrome
+
+  # one day remove /etc/hosts bind mount when effing
+  # overlay support inotify, such bullshit
+  docker run -d \
+    --memory 3gb \
+    --net host \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    -v $HOME/Downloads:/root/Downloads \
+    -v $HOME/Pictures:/root/Pictures \
+    -v $HOME/Torrents:/root/Torrents \
+    -v $HOME/.chrome:/data \
+    -v /etc/hosts:/etc/hosts \
+    --device /dev/snd \
+    --device /dev/dri \
+    --device /dev/video0 \
+    --name chrome \
+    jess/chrome --user-data-dir=/data --force-device-scale-factor=1 "$@"
+
+  # exit current shell
+  #exit 0
+}
+qgis(){
+  docker run --rm --name="qgis-desktop-master" \
+    -i -t \
+    -v ${HOME}:/home/${USER} \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    kartoza/qgis-desktop
 }
 
 echo "-------------------------------------"
