@@ -163,3 +163,9 @@ workspace_layout stacking
 bindsym $mod+c exec "chromium --force-device-scale-factor=2"
 # from: https://faq.i3wm.org/question/1774/rename-workspace-with-i3-input-using-numbers-and-text/
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
+
+# Open Anki on workspace 10
+exec --no-startup-id i3-msg 'workspace 10: Anki; exec chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/'
+
+# FINISH by coming back to workspace 1 (BUGBUG: Currently causes chromium to start on workspace 1)
+#exec --no-startup-id i3-msg 'workspace 1'
