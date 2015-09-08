@@ -31,6 +31,9 @@ fi
 # Allow docker connections to X
 xhost +local:docker
 
+# Start devmon/udevil for automatic mounting of media
+( sleep 2 && devmon ) &
+
 # i3 all the way
 exec i3
 #twm &
@@ -38,3 +41,4 @@ exec i3
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
+
