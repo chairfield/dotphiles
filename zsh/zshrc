@@ -275,6 +275,12 @@ qgis(){
     -e DISPLAY=unix$DISPLAY \
     kartoza/qgis-desktop
 }
+anki(){
+  i3-msg 'workspace 10: Anki; exec chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/'
+}
+kali(){
+  docker run -it -v /home/c:/mnt/home chairfield/kali /bin/bash
+}
 
 echo "-------------------------------------"
 echo "\"I make, every day, hours for motivation. I motivate myself; I make time. I make appointments with myself to motivate myself and inspire myself. I don't wait for it to come from the heavens and to fall on me.\""
