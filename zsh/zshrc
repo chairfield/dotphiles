@@ -281,6 +281,14 @@ anki(){
 kali(){
   docker run -it -v /home/c:/mnt/home chairfield/kali /bin/bash
 }
+excel(){
+  echo "Shortcuts:"
+  echo "----------"
+  echo "Edit cell: F2"
+  echo "Add new row above current: Shift+Space then Ctrl+Shift+Plus"
+  sleep 5
+  gnumeric &
+}
 
 echo "-------------------------------------"
 echo "\"I make, every day, hours for motivation. I motivate myself; I make time. I make appointments with myself to motivate myself and inspire myself. I don't wait for it to come from the heavens and to fall on me.\""
