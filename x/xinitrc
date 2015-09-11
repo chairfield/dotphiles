@@ -34,6 +34,9 @@ xhost +local:docker
 # Start devmon/udevil for automatic mounting of media
 ( sleep 2 && devmon ) &
 
+# Start pulseaudio manually (the Skype Docker container doesn't trigger the autospawn condition that's used to start PulseAudio normally)
+pulseaudio --start
+
 # i3 all the way
 exec i3
 #twm &
