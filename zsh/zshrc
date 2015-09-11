@@ -289,6 +289,11 @@ excel(){
   sleep 5
   gnumeric &
 }
+comm(){
+  i3-msg 'workspace 8: Hangouts; exec chromium --new-window --force-device-scale-factor=2 https://hangouts.google.com/'
+  sleep 1
+  i3-msg 'workspace 9: Slack; exec scudcloud'
+}
 
 echo "-------------------------------------"
 echo "\"I make, every day, hours for motivation. I motivate myself; I make time. I make appointments with myself to motivate myself and inspire myself. I don't wait for it to come from the heavens and to fall on me.\""
