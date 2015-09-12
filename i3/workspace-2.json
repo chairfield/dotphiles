@@ -54,7 +54,7 @@
             "percent": 1,
             "swallows": [
                {
-               // "class": "^Gnumeric$",
+               "class": "^Gnumeric$"
                // "instance": "^gnumeric$",
                // "title": "^\\*x\\-calendar\\.gnumeric\\ \\-\\ Gnumeric$",
                // "transient_for": "^$"

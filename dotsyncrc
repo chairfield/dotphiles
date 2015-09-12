@@ -35,6 +35,7 @@ i3/config:.i3/config
 i3/startup.sh:.i3/startup.sh
 i3/workspace-1.json:.i3/workspace-1.json
 i3/workspace-2.json:.i3/workspace-2.json
+i3/workspace-10.json:.i3/workspace-10.json
 i3status/i3status.conf
 #input/editrc
 #input/inputrc

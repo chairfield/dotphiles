@@ -157,8 +157,8 @@ bar {
 
 ### PERSONAL SETTINGS ###
 
-# Set up my default workspaces (1: today/learnings, 2: Timeline)
-exec --no-startup-id "i3-msg ~/.i3/startup.sh"
+# Set up my default workspaces (1: today/learnings, 2: Timeline, 10: Anki)
+exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
 
 # sets the default layout to stacking
 workspace_layout stacking
@@ -166,9 +166,3 @@ workspace_layout stacking
 bindsym $mod+c exec "chromium --force-device-scale-factor=2"
 # from: https://faq.i3wm.org/question/1774/rename-workspace-with-i3-input-using-numbers-and-text/
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
-
-# Open Anki on workspace 10
-exec --no-startup-id i3-msg 'workspace 10: Anki; exec chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/'
-
-# FINISH by coming back to workspace 1 (BUGBUG: Currently causes chromium to start on workspace 1)
-#exec --no-startup-id i3-msg 'workspace 1'
