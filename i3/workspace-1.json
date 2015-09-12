@@ -23,7 +23,7 @@
                {
                "class": "^Terminator$",
                // "instance": "^terminator$",
-               "title": "^Today\\ Notes\\/Learnings$"
+               "title": "^To\\ Do$"
                // "transient_for": "^$"
                }
             ],
