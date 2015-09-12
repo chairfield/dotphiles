@@ -14,18 +14,17 @@
             "geometry": {
                "height": 1736,
                "width": 3192,
-               "x": 4,
+               "x": 0,
                "y": 26
             },
-            "name": "Anki - friendly, intelligent flashcards - Chromium",
-            "percent": null,
+            "name": "Anki - User 1",
+            "percent": 1,
             "swallows": [
                {
-               "class": "^Chromium$"
-               // "instance": "^Chromium$",
-               // "title": "^Anki\\ \\-\\ friendly\\,\\ intelligent\\ flashcards\\ \\-\\ Chromium$",
-               // "transient_for": "^$",
-               // "window_role": "^browser$"
+               "class": "^Anki$"
+               // "instance": "^anki$",
+               // "title": "^Anki\\ \\-\\ User\\ 1$",
+               // "transient_for": "^$"
                }
             ],
             "type": "con"
