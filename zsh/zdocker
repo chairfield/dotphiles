@@ -1,0 +1,72 @@
+#!/bin/zsh
+
+# Skype
+alias skype="ssh docker-skype skype-pulseaudio"
+alias skyperun="sudo docker run -d -p 55555:22 skype"
+function skypekill() {
+  docker rm -f $(docker ps -q -f image=skype)
+}
+
+# Irssi
+alias irssi="docker run -it --rm -v /etc/localtime:/etc/localtime -v $HOME/.irssi:/home/user/.irssi --read-only --name irssi irssi"
+
+del_stopped(){
+  local name=$1
+  local state=$(docker inspect --format "{{.State.Running}}" $name 2>/dev/null)
+
+  if [[ "$state" == "false" ]]; then
+    docker rm $name
+  fi
+}
+remmina(){
+  del_stopped remmina
+
+  docker run -d \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    -e GDK_SCALE \
+    -e GDK_DPI_SCALE \
+    -v $HOME/.remmina:/root/.remmina \
+    --name remmina \
+    jess/remmina
+}
+jchrome(){
+  del_stopped chrome
+
+  # one day remove /etc/hosts bind mount when effing
+  # overlay support inotify, such bullshit
+  docker run -d \
+    --memory 3gb \
+    --net host \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    -v $HOME/m/Downloads:/root/Downloads \
+    -v $HOME/m/Pictures:/root/Pictures \
+    -v $HOME/m/Torrents:/root/Torrents \
+    -v $HOME/.chrome:/data \
+    -v /etc/hosts:/etc/hosts \
+    --device /dev/snd \
+    --device /dev/dri \
+    --device /dev/video0 \
+    --name chrome \
+    jess/chrome --user-data-dir=/data --force-device-scale-factor=1 "$@"
+
+  # exit current shell
+  #exit 0
+}
+qgis(){
+  docker run --rm --name="qgis-desktop-master" \
+    -i -t \
+    -v ${HOME}:/home/${USER} \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    kartoza/qgis-desktop
+}
+kali(){
+  docker run -it -v /home/c:/mnt/home chairfield/kali /bin/bash
+}
+pdflatex(){
+  docker run --user="$(id -u):$(id -g)" --net=none -v $PWD:/data blang/latex pdflatex $@
+}
