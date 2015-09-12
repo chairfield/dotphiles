@@ -21,9 +21,9 @@
             "percent": 1,
             "swallows": [
                {
-               "class": "^Terminator$"
+               "class": "^Terminator$",
                // "instance": "^terminator$",
-               // "title": "^vim\\ x\\-goals\\.txt$"
+               "title": "^Goals$"
                // "transient_for": "^$"
                }
             ],
