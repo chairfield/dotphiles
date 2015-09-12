@@ -25,4 +25,5 @@ if has("user_commands")
 endif
 
 " Customize to your needs...
+command! -nargs=* Wrap set wrap linebreak nolist
 
