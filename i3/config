@@ -157,7 +157,7 @@ bar {
 
 ### PERSONAL SETTINGS ###
 
-# Set up my default workspaces (1: today/learnings, 2: Timeline, 10: Anki)
+# Set up my default workspaces
 exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
 
 # sets the default layout to stacking

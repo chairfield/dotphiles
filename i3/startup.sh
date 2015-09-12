@@ -15,3 +15,6 @@ gnumeric x-calendar.gnumeric &
 i3-msg workspace 10: Anki
 i3-msg append_layout ~/.i3/workspace-10.json
 chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/ &
+
+# End on Workspace 3
+i3-msg workspace 3
