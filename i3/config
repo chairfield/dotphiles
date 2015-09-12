@@ -157,6 +157,9 @@ bar {
 
 ### PERSONAL SETTINGS ###
 
+# Set up my default workspaces (1: today/learnings, 2: Timeline)
+exec --no-startup-id "i3-msg ~/.i3/startup.sh"
+
 # sets the default layout to stacking
 workspace_layout stacking
 
