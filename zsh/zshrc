@@ -27,7 +27,8 @@ zstyle ':dotzsh:load' dzmodule \
   'history' \
   'utility' \
   'completion' \
-  'theme'
+  'theme' \
+  'docker'
 
 ### Global settings
 # Color output (auto set to 'no' on dumb terminals).
