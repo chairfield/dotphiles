@@ -14,7 +14,7 @@ gnumeric x-calendar.gnumeric &
 # Workspace 4: Chromium
 i3-msg workspace 4: chromium
 i3-msg append_layout ~/.i3/workspace-4.json
-chromium --new-window --force-device-scale-factor=2 &
+chromium --new-window &
 
 # Workspace 10: Open chromium and point it to my Anki decks
 i3-msg workspace 10: Anki
