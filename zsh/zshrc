@@ -230,6 +230,13 @@ comm(){
   sleep 1
   i3-msg 'workspace 9: Slack; exec scudcloud'
 }
+eod(){
+  cd ~/g/self
+  git add *
+  git commit -m "push"
+  git push
+  popd
+}
 
 echo "-------------------------------------"
 echo "\"I make, every day, hours for motivation. I motivate myself; I make time. I make appointments with myself to motivate myself and inspire myself. I don't wait for it to come from the heavens and to fall on me.\""
