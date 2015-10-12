@@ -157,6 +157,10 @@ bar {
 
 ### PERSONAL SETTINGS ###
 
+# Set up function keys
+bindsym XF86MonBrightnessUp exec "light -A 10"
+bindsym XF86MonBrightnessDown exec "light -U 10"
+
 # Set up my default workspaces
 exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
 
