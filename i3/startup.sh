@@ -17,9 +17,9 @@ i3-msg append_layout ~/.i3/workspace-4.json
 chromium --new-window &
 
 # Workspace 10: Open chromium and point it to my Anki decks
-i3-msg workspace 10: Anki
-i3-msg append_layout ~/.i3/workspace-10.json
-anki &
+#i3-msg workspace 10: Anki
+#i3-msg append_layout ~/.i3/workspace-10.json
+#anki &
 
 # End on Workspace 3
 i3-msg workspace 3
