@@ -21,7 +21,7 @@
             "percent": 1,
             "swallows": [
                {
-               "class": "^Chromium$"
+               "class": "^chromium$"
                // "instance": "^Chromium$",
                // "title": "^New\\ Tab\\ \\-\\ Chromium$",
                // "transient_for": "^$",
