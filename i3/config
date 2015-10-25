@@ -158,6 +158,10 @@ bar {
 ### PERSONAL SETTINGS ###
 
 # Set up function keys
+bindsym XF86AudioMute exec "pactl set-sink-mute 1 toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute 1 false; pactl set-sink-volume 1 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 1 false; pactl set-sink-volume 1 -5%"
+bindsym XF86AudioMicMute exec "pactl set-sink-input-mute 1 toggle"
 bindsym XF86MonBrightnessUp exec "light -A 10"
 bindsym XF86MonBrightnessDown exec "light -U 10"
 
