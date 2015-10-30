@@ -213,7 +213,7 @@ source .zdocker
 ls -l --sort=time | tail -n 3 | awk '{ printf "%-30s %s %s\n", $9, $6, $7 }'
 
 alias killx="pkill -15 Xorg"
-alias hib="sudo systemctl hibernate"
+alias hib="sudo PM_DEBUG=true pm-hibernate"
 alias gs="git status"
 alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
