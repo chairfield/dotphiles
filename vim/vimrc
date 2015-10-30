@@ -23,6 +23,7 @@ if has("user_commands")
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   Bundle 'ekalinin/Dockerfile.vim'
+  Bundle 'fatih/vim-go'
   Bundle 'tomasr/molokai'
 endif
 
