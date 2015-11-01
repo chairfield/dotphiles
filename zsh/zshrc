@@ -213,10 +213,10 @@ source .zdocker
 ## Aliases
 #############################
 # Branch Nodes
-alias ls="ls -hltrL --color --group-directories-first" # Used by: h
+alias ls="ls -hltr --color --group-directories-first" # Used by: h
 #############################
 # Leaf Nodes
-alias h="cd ~/h; ls"
+alias h="cd ~/h; ls -L"
 alias killx="pkill -15 Xorg"
 alias hib="sudo PM_DEBUG=true pm-hibernate"
 alias gs="git status"
