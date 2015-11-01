@@ -213,7 +213,7 @@ source .zdocker
 ## Aliases
 #############################
 # Branch Nodes
-alias ls="ls -hltr --color" # Used by: h
+alias ls="ls -hltr --color --group-directories-first" # Used by: h
 #############################
 # Leaf Nodes
 alias h="cd ~/h; ls"
