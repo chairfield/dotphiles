@@ -16,7 +16,7 @@ if has("user_commands")
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
   "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'git', 'programming']
+  let g:vundles=['general', 'git'] " programming has an annoying latex module
   let g:neocomplcache_enable_at_startup = 1
   let g:dotvim_colorscheme='molokai'
   " Load 'vundles'
