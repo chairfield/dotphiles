@@ -12,9 +12,9 @@ terminator --command "vim ~/x-learnings.txt" -T "Learnings" &
 gnumeric x-calendar.gnumeric &
 
 # Workspace 4: Chromium
-i3-msg workspace 4
-i3-msg append_layout ~/.i3/workspace-4.json
-chromium --new-window &
+#i3-msg workspace 4
+#i3-msg append_layout ~/.i3/workspace-4.json
+#chromium --new-window &
 
 # Workspace 5: Project
 #i3-msg workspace 5: project
