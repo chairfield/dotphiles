@@ -218,7 +218,7 @@ alias ls="ls -hlr --color --group-directories-first --time=atime --sort=time" # 
 # Leaf Nodes
 alias h="cd ~/h; ls -L"
 alias killx="pkill -15 Xorg"
-alias hib="sudo PM_DEBUG=true pm-hibernate"
+alias hib="sudo pm-hibernate" # PM_DEBUG=true for debug file
 alias gs="git status"
 alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
@@ -246,6 +246,9 @@ eod(){
   git commit -m "push"
   git push
   popd
+}
+pdf(){
+  okular ${1:-*.pdf} &
 }
 
 #############################
