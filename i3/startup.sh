@@ -3,13 +3,13 @@
 # Workspace 1: Open a vim window with x-today.txt and x-learnings.txt in vsplit
 i3-msg workspace 1: today/goals
 i3-msg append_layout ~/.i3/workspace-1.json
-terminator --command "vim -O ~/x-today.txt ~/x-goals.txt" -T "To Do" &
+terminator --command "vim -O ~/h/today.txt ~/h/goals.txt" -T "To Do" &
 
 # Workspace 2: Open a vim window with x-goals.txt on the left and my calendar spreadsheet on the right
 i3-msg workspace 2: learnings/calendar
 i3-msg append_layout ~/.i3/workspace-2.json
-terminator --command "vim ~/x-learnings.txt" -T "Learnings" &
-gnumeric x-calendar.gnumeric &
+terminator --command "vim ~/h/learnings.txt" -T "Learnings" &
+gnumeric ~/h/calendar.gnumeric &
 
 # Workspace 4: Chromium
 #i3-msg workspace 4
