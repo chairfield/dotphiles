@@ -1,5 +1,7 @@
 [global_config]
 [keybindings]
+  paste = <Control>v
+  copy = <Control>c
 [profiles]
   [[default]]
 [layouts]
