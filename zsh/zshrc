@@ -224,6 +224,10 @@ alias gs="git status"
 alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 #############################
+# LTF
+alias w="cd ~/w/g; ls -L"
+alias vpn='sudo openvpn --config ~/.config/client.ovpn'
+#############################
 
 anki(){
   i3-msg 'workspace 10: Anki; exec chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/'
