@@ -1,9 +1,10 @@
 [global_config]
 [keybindings]
-  paste = <Control>v
   copy = <Control>c
+  paste = <Control>v
 [profiles]
   [[default]]
+    background_image = None
 [layouts]
   [[default]]
     [[[child1]]]
