@@ -5,6 +5,7 @@
 [profiles]
   [[default]]
     background_image = None
+    scrollback_lines = 10000
 [layouts]
   [[default]]
     [[[child1]]]
