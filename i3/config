@@ -166,7 +166,7 @@ bindsym XF86MonBrightnessUp exec "light -A 10"
 bindsym XF86MonBrightnessDown exec "light -U 10"
 
 # Set up my default workspaces
-exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
+#exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
 
 # sets the default layout to stacking
 workspace_layout stacking
