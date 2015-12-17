@@ -228,6 +228,7 @@ alias resetupstream="git fetch upstream && git reset --hard upstream/master && g
 # LTF
 alias w="cd ~/w/g; ls -L"
 alias vpn='sudo openvpn --config ~/.config/client.ovpn'
+alias awswarm='export DOCKER_HOST="tcp://$(curl -s http://consul.eventops.io:8500/v1/kv/syracuse/dev/aws/us-east-1/docker/swarm/leader?raw)"'
 #############################
 
 anki(){
