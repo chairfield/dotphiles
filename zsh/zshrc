@@ -229,6 +229,10 @@ alias resetupstream="git fetch upstream && git reset --hard upstream/master && g
 alias w="cd ~/w/g; ls -L"
 alias vpn='sudo openvpn --config ~/.config/client.ovpn'
 alias awswarm='export DOCKER_HOST="tcp://$(curl -s http://consul.eventops.io:8500/v1/kv/syracuse/dev/aws/us-east-1/docker/swarm/leader?raw)"'
+alias dcu='docker-compose up -d && docker-compose logs'
+alias dccu='docker-compose -f docker-compose-cluster.yml up -d && docker-compose -f docker-compose-cluster.yml logs'
+alias dcd='docker-compose kill && docker-compose rm -f'
+alias dccd='docker-compose -f docker-compose-cluster.yml kill && -f docker-compose-cluster.yml docker-compose rm -f'
 #############################
 
 anki(){
