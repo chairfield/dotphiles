@@ -81,6 +81,7 @@ x/xinitrc
 x/Xmodmap
 #zsh/fasdrc
 zsh/dotzsh:.zsh
+zsh/oh-my-zsh/key-bindings_patches.zsh:.oh-my-zsh/custom/key-bindings_patches.zsh
 zsh/zdocker
 zsh/zlogin
 #zsh/zlogout
