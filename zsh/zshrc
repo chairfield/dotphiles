@@ -278,3 +278,7 @@ h
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Map caps to escape (tried in xinitrc and it didn't work)
+setxkbmap -option caps:escape
+
