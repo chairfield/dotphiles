@@ -34,6 +34,9 @@ xhost +local:docker
 # Start devmon/udevil for automatic mounting of media
 ( sleep 2 && devmon ) &
 
+# Map caps to escape
+setxkbmap -option caps:escape
+
 # i3 all the way
 exec i3
 #twm &
