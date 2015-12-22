@@ -158,7 +158,7 @@ bar {
 ### PERSONAL SETTINGS ###
 
 bindsym $mod+Control+Left move workspace to output left
-bindsym $mod+Control+Right move workspace to output left
+bindsym $mod+Control+Right move workspace to output right
 
 # Set up function keys
 bindsym XF86AudioMute exec "pactl set-sink-mute 1 toggle"
