@@ -29,8 +29,8 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# start a terminator terminal (--working-directory is an option of terminator)
+bindsym $mod+Return exec i3-sensible-terminal #--working-directory=$pwd
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -155,7 +155,14 @@ bar {
         status_command i3status
 }
 
+### PERSONAL SCRIPTS ###
+
+exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
+exec --no-startup-id "i3-msg exec ~/.i3/xrandr.sh"
+
 ### PERSONAL SETTINGS ###
+
+workspace_layout stacking
 
 bindsym $mod+Control+Left move workspace to output left
 bindsym $mod+Control+Right move workspace to output right
@@ -168,16 +175,8 @@ bindsym XF86AudioMicMute exec "pactl set-sink-input-mute 1 toggle"
 bindsym XF86MonBrightnessUp exec "light -A 10"
 bindsym XF86MonBrightnessDown exec "light -U 10"
 
-# Set up my default workspaces
-#exec --no-startup-id "i3-msg exec ~/.i3/startup.sh"
-
-# sets the default layout to stacking
-workspace_layout stacking
-
 bindsym $mod+c exec "chromium"
 # from: https://faq.i3wm.org/question/1774/rename-workspace-with-i3-input-using-numbers-and-text/
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 bindsym $mod+m exec --no-startup-id "i3-msg exec ~/.i3/xrandr.sh"
 
-# Set up my monitors
-exec --no-startup-id "i3-msg exec ~/.i3/xrandr.sh"
