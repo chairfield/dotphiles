@@ -235,9 +235,6 @@ alias dcd='docker-compose kill && docker-compose rm -f'
 alias dccd='docker-compose -f docker-compose-cluster.yml kill && -f docker-compose-cluster.yml docker-compose rm -f'
 #############################
 
-anki(){
-  i3-msg 'workspace 10: Anki; exec chromium --new-window --force-device-scale-factor=2 https://ankiweb.net/decks/'
-}
 excel(){
   echo "Shortcuts:"
   echo "----------"
