@@ -259,6 +259,26 @@ eod(){
 pdf(){
   okular ${1:-*.pdf} &
 }
+wifi(){
+  if [ -z $1 ]
+  then
+    iwconfig wlp3s0
+  elif [ $1 = "on" ]
+  then
+    sudo ifconfig wlp3s0 up
+  elif [ $1 = "off" ]
+  then
+    sudo ifconfig wlp3s0 down
+  elif [ $1 = "scan" ]
+  then
+    echo "TODO: Try scan and scan_results"
+    sudo wpa_cli
+  else
+    echo "only on, off, and scan are supported"
+  fi
+
+  # TODO: map to F8
+}
 
 #############################
 ## Print-on-start
