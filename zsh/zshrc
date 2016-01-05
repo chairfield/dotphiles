@@ -209,6 +209,7 @@ envoy -t ssh-agent
 source <(envoy -p)
 
 source .zdocker
+source .trogdor_aliases
 
 #############################
 ## Aliases
