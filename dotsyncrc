@@ -95,6 +95,7 @@ zsh/zshrc
 [hosts]
 localhost                        git=ANY
 ARCHER                           git=ANY
+LTARCH                           git=ANY
 MNHQATLT29                       git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
