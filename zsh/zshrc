@@ -225,8 +225,8 @@ alias hyb="sudo systemctl suspend-hybrid"
 alias gs="git status"
 alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
-alias tar="tar cvzf"
-alias untar="tar xvzf"
+alias ctar="tar -cvzf"
+alias utar="tar -xvzf"
 #############################
 # LTF
 alias w="cd ~/w/g; ls -L"
