@@ -228,10 +228,14 @@ alias resetupstream="git fetch upstream && git reset --hard upstream/master && g
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
 #############################
-# LTF
-alias w="cd ~/w/g; ls -L"
-#############################
 
+w(){
+  if [ -d ~/w/g ]; then
+    cd ~/w/g;
+  elif [ -d ~/g ]; then
+    cd ~/g;
+  fi
+}
 excel(){
   echo "Shortcuts:"
   echo "----------"
