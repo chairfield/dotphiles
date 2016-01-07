@@ -230,11 +230,12 @@ alias utar="tar -xvzf"
 #############################
 
 w(){
-  if [ -d ~/w/g ]; then
+  if [ -d "$HOME/w/g" ]; then
     cd ~/w/g;
-  elif [ -d ~/g ]; then
+  elif [ -d "$HOME/g" ]; then
     cd ~/g;
   fi
+  ls -L
 }
 excel(){
   echo "Shortcuts:"
