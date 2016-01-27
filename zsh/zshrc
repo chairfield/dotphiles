@@ -288,6 +288,11 @@ help(){
   echo "  foxit pdf -> okular"
   echo "  "
 }
+sync(){
+  cd ~/.dotfiles
+  git status --porcelain
+  git push
+}
 
 #############################
 ## Print-on-start
