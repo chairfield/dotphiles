@@ -280,6 +280,13 @@ wifi(){
 
   # TODO: map to F8
 }
+help(){
+  echo "Useful tidbits:"
+  echo "  greenshot -> spectacle"
+  echo "      excel -> gnumeric"
+  echo "  notepad++ -> atom"
+  echo "  "
+}
 
 #############################
 ## Print-on-start
