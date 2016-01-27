@@ -285,6 +285,7 @@ help(){
   echo "  greenshot -> spectacle"
   echo "      excel -> gnumeric"
   echo "  notepad++ -> atom"
+  echo "  foxit pdf -> okular"
   echo "  "
 }
 
