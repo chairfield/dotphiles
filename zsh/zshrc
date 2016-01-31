@@ -290,8 +290,16 @@ help(){
 }
 sync(){
   cd ~/.dotfiles
+  git pull
   git status --porcelain
   git push
+  popd
+
+  cd ~/.sysfiles
+  git pull
+  git status --porcelain
+  git push
+  popd
 }
 
 #############################
