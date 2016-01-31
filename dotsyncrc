@@ -79,6 +79,7 @@ vim/vimrc
 #wget/wgetrc
 x/xinitrc
 x/Xmodmap
+x/Xresources
 #zsh/fasdrc
 zsh/dotzsh:.zsh
 zsh/oh-my-zsh/key-bindings_patches.zsh:.oh-my-zsh/custom/key-bindings_patches.zsh
