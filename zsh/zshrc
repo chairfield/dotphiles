@@ -282,10 +282,11 @@ wifi(){
 }
 help(){
   echo "Useful tidbits:"
-  echo "  greenshot -> spectacle"
-  echo "      excel -> gnumeric"
-  echo "  notepad++ -> atom"
-  echo "  foxit pdf -> okular"
+  echo "     greenshot -> spectacle"
+  echo "         excel -> gnumeric"
+  echo "     notepad++ -> atom"
+  echo "     foxit pdf -> okular"
+  echo " screen layout -> arandr"
   echo "  "
 }
 sync(){
