@@ -34,6 +34,9 @@ xhost +local:docker
 # Start devmon/udevil for automatic mounting of media
 ( sleep 2 && devmon ) &
 
+# Autolock my screen after 5 minutes
+xautolock -time 5 -locker "i3lock -c 000000" -detectsleep -secure
+
 # i3 all the way
 exec i3
 #twm &
