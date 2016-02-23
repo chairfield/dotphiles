@@ -289,7 +289,7 @@ help(){
   echo " screen layout -> arandr"
   echo "  "
 }
-sync(){
+syncg(){
   cd ~/.dotfiles
   git pull
   git status --porcelain
