@@ -232,8 +232,8 @@ alias utar="tar -xvzf"
 #############################
 
 w(){
-  if [ -d "$HOME/w/g" ]; then
-    cd ~/w/g;
+  if [ -d "$HOME/w" ]; then
+    cd ~/w;
   elif [ -d "$HOME/g" ]; then
     cd ~/g;
   fi
