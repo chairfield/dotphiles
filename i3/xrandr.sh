@@ -8,12 +8,18 @@ echo "$CONNECTED_DISPLAYS"
 # First disable all screens
 xrandr | grep -v '^[ ]' | grep '^[a-zA-Z]*\-' | awk '{ print $1 }' | xargs bash -c 'for display; do xrandr --output "$display" --off; done' bash
 
-if [ 3 -eq $CONNECTED_DISPLAY_COUNT ]; then
-    # TODO: Verify that the three are eDP-1, DP-2-1, and DP-2-2
-    xrandr --output eDP-1 --auto --primary # Turn on the main screen as primary
-    xrandr --output DP-2-1 --auto --output DP-2-2 --auto # Turn on the extra screens
-    xrandr --output eDP-1 --pos 0x840 # I think turning it on as the only monitor automatically sets -pos to 0x0, so I do it after turning on the other guys
-    xrandr --output DP-2-1 --rotate right --pos 3000x0 --output DP-2-2 --rotate left --pos 1920x0
+if [ 4 -eq $CONNECTED_DISPLAY_COUNT ]; then
+    # TODO: Verify that the four are eDP-1, DP-2-1, DP-2-2, and DP-1
+    xrandr --output eDP-1 --off
+    xrandr --output DP-1 --auto --output DP-2-1 --auto --output DP-2-2-8 --auto --primary # Turn on the extra screens
+    xrandr --output DP-2-1 --rotate right --pos 2520x640 \
+           --output DP-2-2-8 --rotate right --pos 1080x0 \
+           --output DP-1 --rotate left --pos 0x640
+elif [ 3 -eq $CONNECTED_DISPLAY_COUNT ]; then
+    # TODO: Verify that the three are eDP-1, DP-2-1, and DP-2-2-8
+    xrandr --output eDP-1 --off
+    xrandr --output DP-2-1 --auto --output DP-2-2-8 --auto --primary # Turn on the extra screens
+    xrandr --output DP-2-1 --rotate right --pos 1440x640 --output DP-2-2-8 --rotate right --pos 0x0
 elif [ 2 -eq $CONNECTED_DISPLAY_COUNT ]; then
     xrandr --output eDP-1 --auto --pos 0x0 --primary
     xrandr --output $(echo $CONNECTED_DISPLAYS | tail -1) --auto --same-as eDP-1
