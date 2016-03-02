@@ -181,4 +181,5 @@ bindsym $mod+c exec "chromium"
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 bindsym $mod+m exec --no-startup-id "i3-msg exec ~/.i3/xrandr.sh"
 bindsym $mod+o exec --no-startup-id "i3lock -c 000000"
+bindsym $mod+i exec --no-startup-id "systemctl hibernate"
 
