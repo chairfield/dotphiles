@@ -31,6 +31,9 @@ fi
 # Allow docker connections to X
 xhost +local:docker
 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 # Start devmon/udevil for automatic mounting of media
 ( sleep 2 && devmon ) &
 

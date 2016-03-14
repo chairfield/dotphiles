@@ -204,12 +204,6 @@ source $ZSH/oh-my-zsh.sh
 
 ### Customize to your needs...
 
-# Start envoy for ssh key management
-if type "envoy"; then
-  envoy -t ssh-agent;
-  source <(envoy -p);
-fi
-
 source .zdocker
 source .trogdor_aliases
 
@@ -329,3 +323,7 @@ export ANDROID_HOME=/opt/android-sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
+if [ -n "$DESKTOP_SESSION" ];then
+  eval $(gnome-keyring-daemon --start)
+  export SSH_AUTH_SOCK
+fi
