@@ -223,6 +223,7 @@ alias resetorigin="git fetch origin && git reset --hard origin/master && git cle
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
+alias sagi="sudo apt-get install"
 #############################
 
 w(){
