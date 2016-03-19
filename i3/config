@@ -197,6 +197,7 @@ bindsym $mod+i exec --no-startup-id "systemctl hibernate"
 exec_always feh --bg-scale /home/c/Pictures/wallpaper.jpg
 
 exec spotify
+exec nm-applet
 
 # Interestingly, didn't work with: assign [class="^Spotify$" instance="^spotify$"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
