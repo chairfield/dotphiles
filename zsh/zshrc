@@ -285,7 +285,7 @@ wifi(){
 }
 help(){
   echo "Useful tidbits:"
-  echo "     greenshot -> spectacle"
+  echo "     greenshot -> spectacle/gnome-screenshot"
   echo "         excel -> gnumeric"
   echo "     notepad++ -> atom"
   echo "     foxit pdf -> okular"
