@@ -24,6 +24,7 @@ dotsyncrc
 #ctags/ctags
 #cmus
 #curl/curlrc
+fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
 #git/gitconfig
 #git/gitignore
 #git/gitattributes
