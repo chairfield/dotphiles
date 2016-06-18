@@ -162,7 +162,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        strip_workspace_numbers yes
+#        strip_workspace_numbers yes
 }
 
 ### PERSONAL SCRIPTS ###
@@ -208,4 +208,4 @@ exec nm-applet
 # Interestingly, didn't work with: assign [class="^Spotify$" instance="^spotify$"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
 
-exec --no-startup-id i3-msg workspace 1
+exec --no-startup-id i3-msg workspace $workspace1
