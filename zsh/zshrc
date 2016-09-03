@@ -327,6 +327,8 @@ setxkbmap -option caps:escape
 
 # Conscript (APT/Brew for Scala
 export PATH=$HOME/.conscript/bin:$PATH
+# Giter8 (download git templates)
+export PATH=$HOME/.conscript/foundweekends/giter8:$PATH
 
 # Android
 export ANDROID_HOME=~/Android/Sdk
