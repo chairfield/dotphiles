@@ -325,8 +325,11 @@ export NVM_DIR="$HOME/.nvm"
 setxkbmap -option # unset
 setxkbmap -option caps:escape
 
+# Conscript (APT/Brew for Scala
+export PATH=$HOME/.conscript/bin:$PATH
+
 # Android
-export ANDROID_HOME=/opt/android-sdk
+export ANDROID_HOME=~/Android/Sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
