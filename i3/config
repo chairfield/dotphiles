@@ -162,7 +162,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        strip_workspace_numbers yes
+#        strip_workspace_numbers yes
 }
 
 # class                 border  backgr. text    indicator child_border
