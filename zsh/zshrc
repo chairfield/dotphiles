@@ -237,6 +237,8 @@ w(){
     cd ~/w;
   elif [ -d "$HOME/g" ]; then
     cd ~/g;
+  elif [ -d "$HOME/Workspace" ]; then
+    cd ~/Workspace;
   fi
   ls -L
 }
