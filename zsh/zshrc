@@ -342,3 +342,8 @@ if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
   export SSH_AUTH_SOCK
 fi
+
+# RVM/boson
+source ~/.rvm/scripts/rvm
+alias boson="/usr/local/boson/bin/boson"
+
