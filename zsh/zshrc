@@ -206,6 +206,7 @@ source $ZSH/oh-my-zsh.sh
 
 source .zdocker
 source .trogdor_aliases
+source .private
 
 #############################
 ## Aliases
