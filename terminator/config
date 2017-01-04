@@ -2,6 +2,13 @@
 [keybindings]
   copy = <Control>c
   paste = <Control>v
+[profiles]
+  [[default]]
+    use_custom_command = True
+    scrollback_lines = 10000
+    background_image = None
+    scrollback_infinite = True
+    custom_command = /bin/zsh
 [layouts]
   [[default]]
     [[[child1]]]
@@ -11,8 +18,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_image = None
-    scrollback_infinite = True
-    scrollback_lines = 10000
