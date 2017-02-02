@@ -86,6 +86,7 @@ zsh/dotzsh:.zsh
 zsh/oh-my-zsh/key-bindings_patches.zsh:.oh-my-zsh/custom/key-bindings_patches.zsh
 zsh/zdocker
 zsh/zlogin
+zsh/zsh_manual.html
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
