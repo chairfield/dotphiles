@@ -312,7 +312,7 @@ syncg(){
 #############################
 ## Print-on-start
 #############################
-echo "use bindkey to learn zsh"
+echo "use bindkey and cat to learn zsh; ^ -> CTRL; ^[ -> ALT or ESC"
 # Ido Portal
 #echo ""
 #echo "-------------------------------------"
