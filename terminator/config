@@ -1,5 +1,9 @@
 [global_config]
 [keybindings]
+  cycle_prev = None
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  cycle_next = None
   copy = <Control>c
   paste = <Control>v
 [profiles]
