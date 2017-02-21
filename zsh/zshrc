@@ -340,6 +340,18 @@ export ANDROID_HOME=~/Android/Sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
+# Haskell
+export PATH=/home/c/.local/bin:$PATH
+haskell(){
+  xhost +
+  docker run -it -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
+    -v /dev/shm:/dev/shm \
+    -v ${PWD}:/work \
+    -e DISPLAY=${DISPLAY} \
+    fresheyeball/dev-haskell \
+    bash
+}
+
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
   export SSH_AUTH_SOCK
