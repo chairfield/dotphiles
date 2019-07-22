@@ -206,7 +206,6 @@ source $ZSH/oh-my-zsh.sh
 ### Customize to your needs...
 
 source $HOME/.zdocker
-source $HOME/.trogdor_aliases
 source $HOME/.private
 
 #############################
