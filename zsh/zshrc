@@ -233,6 +233,12 @@ alias sagu="sudo apt-get update"
 alias sagud="sudo apt-get update && sudo apt-get dist-upgrade"
 alias sac="alias sudo apt-cache"
 alias sacs="alias sudo apt-cache search"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias wmrestart="brew services restart koekeishiya/formulae/yabai"
+  alias wmreload="brew services restart koekeishiya/formulae/yabai"
+  alias wmstop="brew services stop koekeishiya/formulae/yabai"
+  alias wmstart="brew services start koekeishiya/formulae/yabai"
+fi
 #############################
 
 w(){

@@ -67,6 +67,7 @@ i3status/i3status.conf
 #screen/screenrc
 #shell/hushlogin
 #shell/urlview
+skhd/skhdrc
 #ssh
 #subversion
 #task/task
@@ -81,6 +82,7 @@ vim/vimrc
 x/xinitrc
 x/Xmodmap
 x/Xresources
+yabai/yabairc
 #zsh/fasdrc
 zsh/dotzsh:.zsh
 zsh/oh-my-zsh/key-bindings_patches.zsh:.oh-my-zsh/custom/key-bindings_patches.zsh
