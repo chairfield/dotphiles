@@ -211,13 +211,6 @@ source $HOME/.private
 #############################
 ## Aliases
 #############################
-# Branch Nodes
-if [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
-  alias ls="ls -hlr --color --group-directories-first --time=atime --sort=time" # Used by: h
-fi
-#############################
-# Leaf Nodes
-alias h="cd ~/h; ls -L"
 alias killx="pkill -15 Xorg"
 alias hib="sudo systemctl hibernate"
 alias hyb="sudo systemctl suspend-hybrid"
