@@ -352,3 +352,20 @@ if [ -f '/Users/chair/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# Vi mode
+bindkey -v
+# Reduce mode switching time
+export KEYTIMEOUT=1
+
+# Better searching in command mode
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
+bindkey -M viins '^F' history-incremental-search-forward
+
+# Beginning search with arrow keys (arrows are a bad habit)
+#bindkey "^[OA" up-line-or-beginning-search
+#bindkey "^[OB" down-line-or-beginning-search
+bindkey -M vicmd "k" up-line-or-beginning-search
+bindkey -M vicmd "j" down-line-or-beginning-search
