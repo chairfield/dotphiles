@@ -140,7 +140,8 @@ AGKOZAK_CUSTOM_RPROMPT='%*'
 # Customize the input lead characters ( normal superuser vi-mode )
 AGKOZAK_PROMPT_CHAR=( ❯ %# ❮ )
 # Prepend a lambda in front of every line, as a visual indicator
-AGKOZAK_CUSTOM_PROMPT="%F{yellow}λ%f $PROMPT"
+# TODO: Figure out why $PROMPT isn't set in time
+#AGKOZAK_CUSTOM_PROMPT="%F{yellow}λ%f $PROMPT"
 # Use prettier 256 colors, if available
 if (( ${terminfo[colors]:-0} >= 256 )); then
   AGKOZAK_COLORS_USER_HOST=108
