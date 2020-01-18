@@ -130,6 +130,11 @@ AGKOZAK_MULTILINE=0
 AGKOZAK_LEFT_PROMPT_ONLY=1
 # Show 3 directories, then trim
 AGKOZAK_PROMPT_DIRTRIM=3
+# Modifying the first 3 symbols: Diverged, Behind, Ahead
+# The other 6: New file(s), Deleted, Modified, Renamed, Untracked, Stashed changes
+AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' '$' )
+# Disable username:hostname, if desired
+#AGKOZAK_USER_HOST_DISPLAY=0
 # Use prettier 256 colors, if available
 if (( ${terminfo[colors]:-0} >= 256 )); then
   AGKOZAK_COLORS_USER_HOST=108
