@@ -123,7 +123,21 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="theunraveler"
+ZSH_THEME="agkozak"
+# Command on same line as prompt
+AGKOZAK_MULTILINE=0
+# Places git status on left side
+AGKOZAK_LEFT_PROMPT_ONLY=1
+# Show 3 directories, then trim
+AGKOZAK_PROMPT_DIRTRIM=3
+# Use prettier 256 colors, if available
+if (( ${terminfo[colors]:-0} >= 256 )); then
+  AGKOZAK_COLORS_USER_HOST=108
+  AGKOZAK_COLORS_PATH=116
+  AGKOZAK_COLORS_BRANCH_STATUS=228
+  AGKOZAK_COLORS_EXIT_STATUS=174
+  AGKOZAK_COLORS_CMD_EXEC_TIME=245
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
