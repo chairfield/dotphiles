@@ -172,7 +172,7 @@ plugins=(git colorize osx zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/google-cloud-sdk/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -368,3 +368,10 @@ fi
 source ~/.rvm/scripts/rvm
 alias boson="/usr/local/boson/bin/boson"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/chair/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chair/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
