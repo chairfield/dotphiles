@@ -327,8 +327,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Map caps to escape (tried in xinitrc and it didn't work)
-setxkbmap -option # unset
-setxkbmap -option caps:escape
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  setxkbmap -option # unset
+  setxkbmap -option caps:escape
+fi
 
 # Conscript (APT/Brew for Scala
 export PATH=$HOME/.conscript/bin:$PATH
