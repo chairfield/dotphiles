@@ -140,8 +140,6 @@ AGKOZAK_CUSTOM_RPROMPT='%*'
 # Customize the input lead characters ( normal superuser vi-mode )
 AGKOZAK_PROMPT_CHAR=( ❯ %# ❮ )
 # Prepend a lambda in front of every line, as a visual indicator
-# TODO: Figure out why $PROMPT isn't set in time
-#AGKOZAK_CUSTOM_PROMPT="%F{yellow}λ%f $PROMPT"
 # Use prettier 256 colors, if available
 if (( ${terminfo[colors]:-0} >= 256 )); then
   AGKOZAK_COLORS_USER_HOST=108
@@ -150,6 +148,13 @@ if (( ${terminfo[colors]:-0} >= 256 )); then
   AGKOZAK_COLORS_EXIT_STATUS=174
   AGKOZAK_COLORS_CMD_EXEC_TIME=245
 fi
+AGKOZAK_CUSTOM_PROMPT=$'\n%F{yellow}λ %(!.%S%B.%B%F{${AGKOZAK_COLORS_USER_HOST}})%n%1v%(!.%b%s.%f%b) '
+AGKOZAK_CUSTOM_PROMPT+='%B%F{${AGKOZAK_COLORS_PATH}}%2v%f%b'
+AGKOZAK_CUSTOM_PROMPT+='%(3V.%F{${AGKOZAK_COLORS_BRANCH_STATUS}}%3v%f.)'
+AGKOZAK_CUSTOM_PROMPT+='%(9V. %F{${AGKOZAK_COLORS_CMD_EXEC_TIME}}%b%9v%b%f.)'
+AGKOZAK_CUSTOM_PROMPT+=$' %(?..%B%F{${AGKOZAK_COLORS_EXIT_STATUS}}(%?%)%f%b )'
+# TODO: Handle superuser case
+AGKOZAK_CUSTOM_PROMPT+='%(4V.%F{88}❮%f.%F{88}❯%f) '
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
