@@ -396,3 +396,5 @@ bindkey -M viins '^F' history-incremental-search-forward
 #bindkey "^[OB" down-line-or-beginning-search
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
+
+export PATH=$HOME/.doom-emacs/bin:$PATH

@@ -1,5 +1,5 @@
 (("bespoke" . ((user-emacs-directory . "~/.config/emacs-bespoke")))
  ("spacemacs" . ((user-emacs-directory . "~/.spacemacs")
-                 (env . (("SPACEMACSDIR" . "~/.config/emacs-spacemacs")))))
+                 (env . (("SPACEMACSDIR" . "~/.config/spacemacs")))))
  ("default" . ((user-emacs-directory . "~/.doom-emacs")
-           (env . (("DOOMDIR" . "~/.config/emacs-doom"))))))
+           (env . (("DOOMDIR" . "~/.config/doom"))))))
