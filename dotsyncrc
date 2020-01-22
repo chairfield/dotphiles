@@ -24,6 +24,10 @@ dotsyncrc
 #ctags/ctags
 #cmus
 #curl/curlrc
+emacs/bespoke:.config/emacs-bespoke
+emacs/doom:.config/emacs-doom
+emacs/spacemacs:.config/emacs-spacemacs
+emacs/emacs-profiles.el
 fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
 git/gitconfig
 #git/gitignore
