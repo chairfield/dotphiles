@@ -32,6 +32,14 @@
 ;; `nil' to disable it:
 (setq display-line-numbers-type t)
 
+;; Useful for the projectile-discover-projects-in-search-path function:
+(setq projectile-project-search-path '("~/code/"))
+
+;; Source 0.6.3: https://dotdoom.netlify.com/config.html#orgca729f4
+(map! :leader
+      (:prefix "o"
+        :desc "ansi-term" "t" #'ansi-term))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
