@@ -26,14 +26,14 @@
 (setq doom-theme 'doom-one)
 
 ;; If you intend to use org, it is recommended you change this!
-(setq org-directory "~/org/")
+(setq org-directory "~/Org/")
 
 ;; If you want to change the style of line numbers, change this to `relative' or
 ;; `nil' to disable it:
 (setq display-line-numbers-type t)
 
 ;; Useful for the projectile-discover-projects-in-search-path function:
-(setq projectile-project-search-path '("~/code/"))
+(setq projectile-project-search-path '("~/Code/"))
 
 ;; Source 0.6.3: https://dotdoom.netlify.com/config.html#orgca729f4
 (map! :leader
