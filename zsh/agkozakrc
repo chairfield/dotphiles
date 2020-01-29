@@ -8,7 +8,7 @@ AGKOZAK_PROMPT_DIRTRIM=3
 # The other 6: New file(s), Deleted, Modified, Renamed, Untracked, Stashed changes
 AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' '$' )
 # Display the time in the right
-AGKOZAK_CUSTOM_RPROMPT='%*'
+#AGKOZAK_CUSTOM_RPROMPT='%*'
 # Prepend a lambda in front of every line, as a visual indicator
 # Use prettier 256 colors, if available
 if (( ${terminfo[colors]:-0} >= 256 )); then
