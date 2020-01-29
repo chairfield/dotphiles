@@ -1,238 +1,14 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# Sets dotzsh options.
-#
-# Authors:
-#   Ben O'Hara <bohara@gmail.com>
-#
+# Load Antigen
+source $HOME/.dotfiles/zsh/antigen.zsh
 
-# debug: see with `dzinfo`
-##zstyle ':dotzsh:load' timing 'yes'
-##zstyle ':dotzsh:module:*' timing 'yes'
+# Load Antigen configurations
+antigen init $HOME/.dotfiles/zsh/antigenrc
 
-# Set the Zsh modules to load (man zshmodules).
-zstyle ':dotzsh:load' zmodule 'stat'
+# Theme configuration
+source $HOME/.dotfiles/zsh/agkozakrc
 
-# Set the Zsh functions to load (man zshcontrib).
-zstyle ':dotzsh:load' zfunction 'zargs' 'zmv'
-
-# Set the dotzsh modules to load (browse modules).
-# The order matters.
-zstyle ':dotzsh:load' dzmodule \
-  'gnu-utility' \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'utility' \
-  'completion' \
-  'theme' \
-  'docker' \
-  'git'
-
-### Global settings
-# Color output (auto set to 'no' on dumb terminals).
-zstyle ':dotzsh:module:*' color 'yes'
-# Setup aliases for modules (disable per module below).
-zstyle ':dotzsh:module:*' aliases 'yes'
-# Set case-sensitivity for completion, history lookup, etc.
-zstyle ':dotzsh:module:*' case-sensitive 'no'
-
-### Environment module
-# Set which PAGER to use less or more
-##zstyle ':dotzsh:module:environment' pager 'less'
-# Enable mouse scrolling in less, add the following to *zshrc*
-##zstyle ':dotzsh:module:environment:pager:less' mousescroll 'false'
-
-### Terminal Module
-# Auto set the tab and window titles.
-zstyle ':dotzsh:module:terminal' auto-title 'yes'
-
-### Editor module
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':dotzsh:module:editor' keymap 'vi'
-# Set EDITOR to 'emacs' or 'vi'.
-zstyle ':dotzsh:module:editor' editor 'vi'
-# Auto convert .... to ../..
-#zstyle ':dotzsh:module:editor' dot-expansion 'yes'
-
-### Utility Module
-# Disable `diff` highlighting
-##zstyle ':dotzsh:module:utility:diff' color 'no'
-# Disable `wdiff` highlighting
-##zstyle ':dotzsh:module:utility:wdiff' color 'no'
-# Disable `make` highlighting
-##zstyle ':dotzsh:module:utility:make' color 'no'
-
-### Completion module
-# Expand global aliases automatically
-#zstyle ':dotzsh:module:completion' expand-global-aliases 'yes'
-
-### SSH module
-zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
-#zstyle ':dotzsh:module:ssh:aliases' hosts 'yes'
-##zstyle ':dotzsh:module:ssh:agent' identities 'id_rsa' 'id_rsa2' 'id_github'
-
-### GNUPG module
-# Enable ssh-agent protocol emulation for gpg-agent
-##zstyle ':dotzsh:module:gnupg' agent-ssh-support 'yes'
-
-### OSX module
-# Add aliases for Applications
-##zstyle ':dotzsh:module:osx' launcher 'yes'
-# Open/Resume temrinal in correct dir
-##zstyle ':dotzsh:module:osx' terminal-resume 'yes'
-
-### Git module
-# Disable all git aliases
-##zstyle ':dotzsh:module:git' aliases 'no'
-
-### TMUX module
-# Auto start a session when Zsh is launched.
-# Setting it to 'local' only starts a session for local terminals.
-# Setting it to 'remote' only starts a session for SSH connections.
-##zstyle ':dotzsh:module:tmux' auto-start 'no'
-#zstyle ':dotzsh:module:tmux:aliases' tmuxinator 'yes'
-
-### Syntax Highlighting module
-#zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'pattern' \
-#  'cursor' 'root' \
-
-### Theme module
-# Set default theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':dotzsh:module:theme' theme 'dotphiles'
-### Set custom theme based on hostname or domain
-# zstyle ':dotzsh:module:theme:hostname:your-host-here' theme 'dotphiles' 'soldark' 'magenta'
-# zstyle ':dotzsh:module:theme:hostname:your-other-host-here' theme 'dotphiles' 'soldark' 'violet'
-# zstyle ':dotzsh:module:theme:domain:your-domain-here' theme 'dotphiles' 'soldark' 'orange'
-
-### Load dotzsh
-export DOTZSH=$HOME/.zsh
-source "$DOTZSH/init.zsh"
-
-
-### oh-my-zsh config
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agkozak"
-# Command on same line as prompt
-AGKOZAK_MULTILINE=0
-# Places git status on left side
-AGKOZAK_LEFT_PROMPT_ONLY=1
-# Show 3 directories, then trim
-AGKOZAK_PROMPT_DIRTRIM=3
-# Modifying the first 3 symbols: Diverged, Behind, Ahead
-# The other 6: New file(s), Deleted, Modified, Renamed, Untracked, Stashed changes
-AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' '$' )
-# Display the time in the right
-AGKOZAK_CUSTOM_RPROMPT='%*'
-# Prepend a lambda in front of every line, as a visual indicator
-# Use prettier 256 colors, if available
-if (( ${terminfo[colors]:-0} >= 256 )); then
-  AGKOZAK_COLORS_USER_HOST=108
-  AGKOZAK_COLORS_PATH=116
-  AGKOZAK_COLORS_BRANCH_STATUS=228
-  AGKOZAK_COLORS_EXIT_STATUS=174
-  AGKOZAK_COLORS_CMD_EXEC_TIME=245
-fi
-AGKOZAK_CUSTOM_PROMPT=$'\n%F{yellow}λ %(!.%S%B.%B%F{${AGKOZAK_COLORS_USER_HOST}})%n%1v%(!.%b%s.%f%b) '
-AGKOZAK_CUSTOM_PROMPT+='%B%F{${AGKOZAK_COLORS_PATH}}%2v%f%b'
-AGKOZAK_CUSTOM_PROMPT+='%(3V.%F{${AGKOZAK_COLORS_BRANCH_STATUS}}%3v%f.)'
-AGKOZAK_CUSTOM_PROMPT+='%(9V. %F{${AGKOZAK_COLORS_CMD_EXEC_TIME}}%b%9v%b%f.)'
-AGKOZAK_CUSTOM_PROMPT+=$' %(?..%B%F{${AGKOZAK_COLORS_EXIT_STATUS}}(%?%)%f%b )'
-# TODO: Handle superuser case
-AGKOZAK_CUSTOM_PROMPT+='%(4V.%F{88}❮%f.%F{88}❯%f) '
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize osx zsh-syntax-highlighting)
-
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:~/google-cloud-sdk/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-### Customize to your needs...
-
-source $HOME/.zdocker
-source $HOME/.private
+# Load docker-based applications/runtimes, like Skype or pdflatex
+source $HOME/.dotfiles/zsh/docker-functions
 
 #############################
 ## Aliases
@@ -245,13 +21,6 @@ alias resetorigin="git fetch origin && git reset --hard origin/master && git cle
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
-alias sag="sudo apt-get"
-alias sagi="sudo apt-get install"
-alias sagd="sudo apt-get dist-upgrade"
-alias sagu="sudo apt-get update"
-alias sagud="sudo apt-get update && sudo apt-get dist-upgrade"
-alias sac="alias sudo apt-cache"
-alias sacs="alias sudo apt-cache search"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias wmrestart="brew services restart koekeishiya/formulae/yabai"
   alias wmreload="brew services restart koekeishiya/formulae/yabai"
@@ -260,36 +29,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 #############################
 
-w(){
-  if [ -d "$HOME/w" ]; then
-    cd ~/w;
-  elif [ -d "$HOME/g" ]; then
-    cd ~/g;
-  elif [ -d "$HOME/Workspace" ]; then
-    cd ~/Workspace;
-  fi
-  ls -L
-}
-excel(){
-  echo "Shortcuts:"
-  echo "----------"
-  echo "Edit cell: F2"
-  echo "Add new row above current: Shift+Space then Ctrl+Shift+Plus"
-  sleep 5
-  gnumeric &
-}
-comm(){
-  i3-msg 'workspace 8: Hangouts; exec chromium --new-window --force-device-scale-factor=2 https://hangouts.google.com/'
-  sleep 1
-  i3-msg 'workspace 9: Slack; exec scudcloud'
-}
-eod(){
-  cd ~/g/self
-  git add *
-  git commit -m "push"
-  git push
-  popd
-}
 pdf(){
   okular ${1:-*.pdf} &
 }
@@ -322,22 +61,6 @@ help(){
   echo " screen layout -> arandr"
   echo "  "
 }
-syncg(){
-  cd ~/.dotfiles
-  git pull
-  git status --porcelain
-  git push
-  popd
-
-  cd ~/.sysfiles
-  git pull
-  git status --porcelain
-  git push
-  popd
-}
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Map caps to escape (tried in xinitrc and it didn't work)
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -355,30 +78,18 @@ export ANDROID_HOME=~/Android/Sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
-# Haskell
-export PATH=/home/c/.local/bin:$PATH
-haskell(){
-  xhost +
-  docker run -it -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
-    -v /dev/shm:/dev/shm \
-    -v ${PWD}:/work \
-    -e DISPLAY=${DISPLAY} \
-    fresheyeball/dev-haskell \
-    bash
-}
-
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)
   export SSH_AUTH_SOCK
 fi
 
+export PATH=$HOME/.google-cloud-sdk/bin:$PATH
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/chair/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chair/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
+if [ -f $HOME/.google-cloud-sdk/path.zsh.inc ]; then . $HOME/.google-cloud-sdk/path.zsh.inc; fi
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chair/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f $HOME/.google-cloud-sdk/completion.zsh.inc ]; then . $HOME/.google-cloud-sdk/completion.zsh.inc; fi
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # Vi mode
 bindkey -v
@@ -398,3 +109,4 @@ bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
 export PATH=$HOME/.doom-emacs/bin:$PATH
+
