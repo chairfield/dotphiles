@@ -309,6 +309,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; Enables `org-indent-mode` for all files, displaying files in a virtual
+  ;; buffer with 2-space indents per heading and section text aligned with its
+  ;; heading title. Doing this solves an annoying behavior with default
+  ;; Spacemacs regarding changing section depth with `M-right`. Now, I can
+  ;; adjust section depth and the section text in my underlying org files
+  ;; remains left-justified.
+  (use-package org
+    :config
+    (setq org-startup-indented t))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
