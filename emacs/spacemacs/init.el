@@ -310,6 +310,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
+  ;; Imports Unicode characters like é and ¼, accessible via the =C-x 8= prefix
+  ;; key.
+  (require 'iso-transl)
+
   ;; Enables `org-indent-mode` for all files, displaying files in a virtual
   ;; buffer with 2-space indents per heading and section text aligned with its
   ;; heading title. Doing this solves an annoying behavior with default
