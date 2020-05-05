@@ -295,7 +295,7 @@ values."
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
-It is called immediately after `dotspacemacs/init', before layer configuration
+ILLLLLLLLLLLt is called immediately after `dotspacemacs/init', before layer configuration
 executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
@@ -325,6 +325,25 @@ you should place your code here."
   (use-package org
     :config
     (setq org-startup-indented t))
+
+  (setq org-agenda-files (list "~/Org/"))
+
+  ;; Expand all files in org-agenda-files, 2 headings deep, when refiling.
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 2)))
+
+  ;; Shows the filename and full heading path, rather than just the heading
+  ;; itself. Allows refiling to the top level of a file.
+  (setq org-refile-use-outline-path 'file)
+
+  ;; Disables multi-step refile, showing file and headers in one go. Org docs
+  ;; recommend this when using a completion package, which Spacemacs does.
+  (setq org-outline-path-complete-in-steps nil)
+
+  ;; Allows me to create new parent nodes from Helm during refile on the fly.
+  ;; Do so by appending "/New Heading" to the Helm query. Unfortunately, atm,
+  ;; the Helm query must match the full entry name.
+  ;; TODO: Learn how to append a parent to a partial Helm match
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
 
   (use-package org-download
     :after org
