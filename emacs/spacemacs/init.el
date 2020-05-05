@@ -314,6 +314,8 @@ you should place your code here."
   ;; key.
   (require 'iso-transl)
 
+  (setq-default auto-fill-function 'do-auto-fill)
+
   ;; Enables `org-indent-mode` for all files, displaying files in a virtual
   ;; buffer with 2-space indents per heading and section text aligned with its
   ;; heading title. Doing this solves an annoying behavior with default
