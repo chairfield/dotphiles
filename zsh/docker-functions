@@ -59,9 +59,6 @@ jchrome(){
 kali(){
   docker run -it -v /home/c:/mnt/home chairfield/kali /bin/bash
 }
-pdflatex(){
-  docker run --user="$(id -u):$(id -g)" --net=none -v $PWD:/data blang/latex pdflatex $@
-}
 haskell(){
   xhost +
   docker run -it -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
