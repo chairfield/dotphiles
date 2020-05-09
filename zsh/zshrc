@@ -22,10 +22,24 @@ alias resetupstream="git fetch upstream && git reset --hard upstream/master && g
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  alias wmrestart="brew services restart koekeishiya/formulae/yabai"
-  alias wmreload="brew services restart koekeishiya/formulae/yabai"
-  alias wmstop="brew services stop koekeishiya/formulae/yabai"
-  alias wmstart="brew services start koekeishiya/formulae/yabai"
+  wmstop(){
+    brew services stop koekeishiya/formulae/yabai
+    brew services stop skhd
+    brew services stop spacebar
+  }
+  wmstart(){
+    brew services start koekeishiya/formulae/yabai
+    brew services start skhd
+    brew services start spacebar
+  }
+  wmrestart(){
+    wmstop
+    wmstart
+  }
+  wmreload(){
+    wmstop
+    wmstart
+  }
 fi
 #############################
 

@@ -72,6 +72,7 @@ i3status/i3status.conf
 #shell/hushlogin
 #shell/urlview
 skhd/skhdrc
+spacebar/spacebarrc:.config/spacebar/spacebarrc
 #ssh
 #subversion
 #task/task
