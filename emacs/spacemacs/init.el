@@ -348,7 +348,9 @@ you should place your code here."
   (use-package org-download
     :after org
     :config
-    (setq-default org-download-image-dir "~/Org/media/"))
+    (setq-default org-download-image-dir "~/Org/media/")
+    (if (equal system-type 'darwin)
+      (setq org-download-screenshot-method "/usr/sbin/screencapture -i %s")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
