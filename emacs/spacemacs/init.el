@@ -316,6 +316,7 @@ you should place your code here."
   (require 'iso-transl)
 
   (setq-default auto-fill-function 'do-auto-fill)
+  (setq-default org-catch-invisible-edits 'smart)
 
   ;; Enables `org-indent-mode` for all files, displaying files in a virtual
   ;; buffer with 2-space indents per heading and section text aligned with its
