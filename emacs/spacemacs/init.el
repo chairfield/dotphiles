@@ -353,6 +353,16 @@ you should place your code here."
     (setq-default org-download-image-dir "~/Org/media/")
     (if (equal system-type 'darwin)
       (setq org-download-screenshot-method "/usr/sbin/screencapture -i %s")))
+
+  ;; Be careful - some key in a layer I don't have installed yet may use this
+  ;; sequence.
+  (spacemacs/set-leader-keys "jt" 'avy-goto-char-timer)
+  ;; Avy offers two org-mode commands:
+  ;; - avy-org-goto-heading-timer: like above, but for headings only
+  ;; - avy-org-refile-as-child: like standard refile, but makes it easy to
+  ;;   refile to headings visible in other windows or buffers
+  ;; Avy is also customizable, should I want non-default functionality.
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
