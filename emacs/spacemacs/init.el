@@ -328,7 +328,16 @@ you should place your code here."
     :config
     (setq org-startup-indented t))
 
-  (setq org-agenda-files (list "~/Org/"))
+  (setq org-agenda-files '("~/Org/inbox.org"
+                           "~/Org/gtd.org"
+                           "~/Org/tickler.org"))
+
+  (setq org-capture-templates '(("t" "TODO [inbox]" entry
+                                 (file "~/Org/inbox.org")
+                                 "* TODO %i%?")
+                                ("T" "Tickler" entry
+                                 (file "~/Org/tickler.org")
+                                 "* %i%? \n %U")))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-pomodoro
