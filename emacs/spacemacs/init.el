@@ -344,8 +344,8 @@ you should place your code here."
   ;;
   ;; Allows me to extend past the 25-minute pomodoro time limit.
   (setq org-pomodoro-manual-break t)
-  ;; If I cancel a pomodoro, count the accumulated time.
-  (setq org-pomodoro-keep-killed-time t)
+  ;; Keeps the clocked time of killed pomodoros.
+  (setq org-pomodoro-keep-killed-pomodoro-time t)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-mode refile
