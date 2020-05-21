@@ -330,17 +330,25 @@ you should place your code here."
 
   (setq org-agenda-files (list "~/Org/"))
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; org-pomodoro
+  ;;
+  ;; Allows me to extend past the 25-minute pomodoro time limit.
+  (setq org-pomodoro-manual-break t)
+  ;; If I cancel a pomodoro, count the accumulated time.
+  (setq org-pomodoro-keep-killed-time t)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; org-mode refile
+  ;;
   ;; Expand all files in org-agenda-files, 2 headings deep, when refiling.
   (setq org-refile-targets '((org-agenda-files :maxlevel . 2)))
-
   ;; Shows the filename and full heading path, rather than just the heading
   ;; itself. Allows refiling to the top level of a file.
   (setq org-refile-use-outline-path 'file)
-
   ;; Disables multi-step refile, showing file and headers in one go. Org docs
   ;; recommend this when using a completion package, which Spacemacs does.
   (setq org-outline-path-complete-in-steps nil)
-
   ;; Allows me to create new parent nodes from Helm during refile on the fly.
   ;; Do so by appending "/New Heading" to the Helm query. Unfortunately, atm,
   ;; the Helm query must match the full entry name.
