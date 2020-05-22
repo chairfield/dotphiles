@@ -332,6 +332,12 @@ you should place your code here."
     :config
     (setq org-startup-indented t))
 
+  ;; Fix bug in spacemacs master branch with org-set-tags.
+  ;; Source: https://emacs.stackexchange.com/questions/48906/spacemacs-error-wrong-type-argument-commandp-org-set-tags-when-setting-tag
+  (with-eval-after-load 'org
+    ;; Replace org-set-tags with org-set-tags-command in keybinding
+    (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command))
+
   (setq org-agenda-files '("~/Org/inbox.org"
                            "~/Org/gtd.org"
                            "~/Org/tickler.org"))
