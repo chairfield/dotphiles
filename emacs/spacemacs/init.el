@@ -332,6 +332,9 @@ you should place your code here."
     :config
     (setq org-startup-indented t))
 
+  (add-hook 'org-mode-hook
+            (lambda () (add-to-list 'helm-completing-read-handlers-alist '(org-set-tags-command))))
+
   ;; Fix bug in spacemacs master branch with org-set-tags.
   ;; Source: https://emacs.stackexchange.com/questions/48906/spacemacs-error-wrong-type-argument-commandp-org-set-tags-when-setting-tag
   (with-eval-after-load 'org
