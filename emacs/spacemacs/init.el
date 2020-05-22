@@ -358,8 +358,8 @@ you should place your code here."
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-mode refile
   ;;
-  ;; Expand all files in org-agenda-files, 2 headings deep, when refiling.
-  (setq org-refile-targets '(("~/Org/gtd.org" :maxlevel . 3)
+  (setq org-refile-targets '(("~/Org/inbox" :level . 0)
+                             ("~/Org/gtd.org" :maxlevel . 3)
                              ("~/Org/someday.org" :level . 1)
                              ("~/Org/tickler.org" :maxlevel . 2)))
   ;; Shows the filename and full heading path, rather than just the heading
