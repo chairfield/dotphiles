@@ -343,6 +343,10 @@ you should place your code here."
                                  (file "~/Org/tickler.org")
                                  "* %i%? \n %U")))
 
+  (setq org-todo-keywords '((sequence
+                             "TODO(t)" "WF(w)" "NA(n)"
+                             "|" "DONE(d)")))
+
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-pomodoro
   ;;
