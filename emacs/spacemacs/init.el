@@ -363,6 +363,7 @@ you should place your code here."
   (setq org-pomodoro-manual-break t)
   ;; Keeps the clocked time of killed pomodoros.
   (setq org-pomodoro-keep-killed-pomodoro-time t)
+  (setq org-pomodoro-finished-sound-args "-volume 0.3")
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-mode refile
