@@ -352,6 +352,9 @@ you should place your code here."
   (setq org-todo-keywords '((sequence
                              "TODO(t)" "WF(w)" "NA(n)"
                              "|" "DONE(d)")))
+  (setq org-todo-keyword-faces
+        '(("WF" . "brown")
+          ("NA" . "orange")))
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-pomodoro
