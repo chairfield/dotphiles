@@ -37,7 +37,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     ivy
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
@@ -332,14 +332,11 @@ you should place your code here."
     :config
     (setq org-startup-indented t))
 
-  (add-hook 'org-mode-hook
-            (lambda () (add-to-list 'helm-completing-read-handlers-alist '(org-set-tags-command))))
-
   ;; Fix bug in spacemacs master branch with org-set-tags.
   ;; Source: https://emacs.stackexchange.com/questions/48906/spacemacs-error-wrong-type-argument-commandp-org-set-tags-when-setting-tag
   (with-eval-after-load 'org
-    ;; Replace org-set-tags with org-set-tags-command in keybinding
-    (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'org-set-tags-command))
+    ;; Replace org-set-tags with Counsel in keybinding
+    (spacemacs/set-leader-keys-for-major-mode 'org-mode ":" 'counsel-org-tag))
 
   (setq org-agenda-files '("~/Org/inbox.org"
                            "~/Org/gtd.org"
@@ -414,7 +411,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (orgit magit-gitflow magit-popup evil-magit smeargle helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link magit undo-tree git-commit with-editor transient csv-mode pandoc-mode ox-pandoc ht org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (wgrep smex ivy-hydra counsel-projectile counsel swiper ivy orgit magit-gitflow magit-popup evil-magit smeargle helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link magit undo-tree git-commit with-editor transient csv-mode pandoc-mode ox-pandoc ht org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(safe-local-variable-values
    (quote
     ((org-image-actual-width . 500)
