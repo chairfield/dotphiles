@@ -364,6 +364,9 @@ you should place your code here."
   ;; Keeps the clocked time of killed pomodoros.
   (setq org-pomodoro-keep-killed-pomodoro-time t)
   (setq org-pomodoro-finished-sound-args "-volume 0.3")
+  (setq org-pomodoro-long-break-sound-args "-volume 0.3")
+  (setq org-pomodoro-short-break-sound-args "-volume 0.3")
+  ;; (setq org-pomodoro-ticking-sound-args "-volume 0.3")
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; org-mode refile
