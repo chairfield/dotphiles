@@ -373,7 +373,7 @@ you should place your code here."
   ;;
   (setq org-refile-targets '(("~/Org/inbox" :level . 0)
                              ("~/Org/gtd.org" :maxlevel . 3)
-                             ("~/Org/someday.org" :level . 1)
+                             ("~/Org/someday.org" :level . 2)
                              ("~/Org/tickler.org" :maxlevel . 2)))
   ;; Shows the filename and full heading path, rather than just the heading
   ;; itself. Allows refiling to the top level of a file.
