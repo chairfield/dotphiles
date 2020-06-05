@@ -24,11 +24,6 @@ emacs/doom:.config/doom
 emacs/spacemacs:.config/spacemacs
 emacs/emacs-profiles.el
 fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
-git/gitconfig
-#git/gitignore
-#git/gitattributes
-#git/tigrc
-#git/gitk
 i3/config:.i3/config
 i3/startup.sh:.i3/startup.sh
 i3/workspace-1.json:.i3/workspace-1.json
