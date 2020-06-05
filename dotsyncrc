@@ -33,6 +33,11 @@ i3/workspace-5.json:.i3/workspace-5.json
 i3/workspace-10.json:.i3/workspace-10.json
 i3/xrandr.sh:.i3/xrandr.sh
 i3status/i3status.conf
+vim/dotvim:.vim
+vim/vimrc
+x/xinitrc
+x/Xmodmap
+x/xresources
 zsh/zdocker
 zsh/zlogin
 zsh/zsh_manual.html
