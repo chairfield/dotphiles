@@ -71,8 +71,6 @@ i3status/i3status.conf
 #screen/screenrc
 #shell/hushlogin
 #shell/urlview
-skhd/skhdrc
-spacebar/spacebarrc:.config/spacebar/spacebarrc
 #ssh
 #subversion
 #task/task
@@ -87,7 +85,6 @@ vim/vimrc
 x/xinitrc
 x/Xmodmap
 x/Xresources
-yabai/yabairc
 zsh/zdocker
 zsh/zlogin
 zsh/zsh_manual.html
