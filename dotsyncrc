@@ -19,10 +19,6 @@ DOTFILES=.dotfiles
 # Uncomment examples below
 dotsyncrc
 #bin:bin
-emacs/bespoke:.config/emacs-bespoke
-emacs/doom:.config/doom
-emacs/spacemacs:.config/spacemacs
-emacs/emacs-profiles.el
 fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
 i3/config:.i3/config
 i3/startup.sh:.i3/startup.sh
