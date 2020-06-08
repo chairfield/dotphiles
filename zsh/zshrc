@@ -125,3 +125,15 @@ bindkey -M vicmd "j" down-line-or-beginning-search
 export PATH=$HOME/.doom-emacs/bin:$PATH
 
 [ -h '/usr/local/bin/vim' ] && alias vim='/usr/local/bin/vim'
+
+check_shell_type() {
+  THIS_SHELL_INTERACTIVE_TYPE='non-interactive';
+  THIS_SHELL_LOGIN_TYPE='non-login';
+  if tty -s; then
+      THIS_SHELL_INTERACTIVE_TYPE='interactive';
+  fi;
+  if [[ -o login ]]; then
+      THIS_SHELL_LOGIN_TYPE='login';
+  fi;
+  echo "$THIS_SHELL_INTERACTIVE_TYPE/$THIS_SHELL_LOGIN_TYPE"
+}
