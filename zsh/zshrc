@@ -21,6 +21,7 @@ alias resetorigin="git fetch origin && git reset --hard origin/master && git cle
 alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
+alias cls="clear && printf '\e[3J'"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   wmstop(){
     brew services stop koekeishiya/formulae/yabai
