@@ -33,11 +33,7 @@ x/xinitrc
 x/Xmodmap
 x/xresources
 zsh/zdocker
-zsh/zlogin
 zsh/zsh_manual.html
-#zsh/zlogout
-#zsh/zprofile
-#zsh/zshenv
 zsh/zshrc
 [endfiles]
 
