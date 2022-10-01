@@ -1,11 +1,4 @@
-# Load Antigen
-source $HOME/.dotfiles/zsh/antigen.zsh
-
-# Load Antigen configurations
-antigen init $HOME/.dotfiles/zsh/antigenrc
-
-# Theme configuration
-source $HOME/.dotfiles/zsh/agkozakrc
+# Sourced from ~/.zsh/.zshrc
 
 # Load docker-based applications/runtimes, like Skype or pdflatex
 source $HOME/.dotfiles/zsh/docker-functions
@@ -16,9 +9,6 @@ source $HOME/.dotfiles/zsh/docker-functions
 alias killx="pkill -15 Xorg"
 alias hib="sudo systemctl hibernate"
 alias hyb="sudo systemctl suspend-hybrid"
-alias gs="git status"
-alias resetorigin="git fetch origin && git reset --hard origin/master && git clean -f -d"
-alias resetupstream="git fetch upstream && git reset --hard upstream/master && git clean -f -d"
 alias ctar="tar -cvzf"
 alias utar="tar -xvzf"
 alias cls="clear && printf '\e[3J'"
