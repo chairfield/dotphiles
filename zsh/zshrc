@@ -96,11 +96,6 @@ if [ -f $HOME/.google-cloud-sdk/completion.zsh.inc ]; then . $HOME/.google-cloud
 
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
-# Vi mode
-bindkey -v
-# Reduce mode switching time
-export KEYTIMEOUT=1
-
 # Better searching in command mode
 bindkey -M vicmd '?' history-incremental-search-backward
 bindkey -M viins '^R' history-incremental-search-backward
