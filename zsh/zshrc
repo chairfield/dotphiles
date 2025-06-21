@@ -1,8 +1,5 @@
 # Sourced from ~/.zsh/.zshrc
 
-# Load docker-based applications/runtimes, like Skype or pdflatex
-source $HOME/.dotfiles/zsh/docker-functions
-
 #############################
 ## Aliases
 #############################

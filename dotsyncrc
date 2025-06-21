@@ -32,7 +32,6 @@ i3status/i3status.conf
 x/xinitrc
 x/Xmodmap
 x/xresources
-zsh/zdocker
 zsh/zsh_manual.html
 zsh/zshrc
 [endfiles]
