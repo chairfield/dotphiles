@@ -19,7 +19,6 @@ DOTFILES=.dotfiles
 # Uncomment examples below
 dotsyncrc
 #bin:bin
-fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
 i3/config:.i3/config
 i3/xrandr.sh:.i3/xrandr.sh
 [endfiles]
