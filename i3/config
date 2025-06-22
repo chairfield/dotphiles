@@ -159,10 +159,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-### PERSONAL SCRIPTS ###
-
-exec --no-startup-id "i3-msg exec ~/.i3/xrandr.sh"
-
 ### PERSONAL SETTINGS ###
 
 workspace_layout stacking

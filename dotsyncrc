@@ -20,7 +20,6 @@ DOTFILES=.dotfiles
 dotsyncrc
 #bin:bin
 i3/config:.i3/config
-i3/xrandr.sh:.i3/xrandr.sh
 [endfiles]
 
 # Hosts to sync
