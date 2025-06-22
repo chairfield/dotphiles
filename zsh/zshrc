@@ -105,8 +105,6 @@ bindkey -M viins '^F' history-incremental-search-forward
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
-export PATH=$HOME/.doom-emacs/bin:$PATH
-
 [ -h '/usr/local/bin/vim' ] && alias vim='/usr/local/bin/vim'
 
 check_shell_type() {

@@ -39,9 +39,4 @@ xautolock -time 5 -locker "i3lock -c 000000" -detectsleep -secure
 
 # i3 all the way
 exec i3
-#twm &
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login
 
