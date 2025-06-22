@@ -23,7 +23,6 @@ fonts/fontawesome-webfont.ttf:.fonts/fontawesome-webfont.ttf
 i3/config:.i3/config
 i3/xrandr.sh:.i3/xrandr.sh
 i3status/i3status.conf
-zsh/zshrc
 [endfiles]
 
 # Hosts to sync
